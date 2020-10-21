@@ -69,7 +69,7 @@ class IMDB_scraper:
                 year.append(
                     movie.find('td', {'class': 'titleColumn'}).find('span', {'class': 'secondaryInfo'}).contents[
                         0].strip('()'))
-                if movie.find('td', {'class': 'ratingColumn imdbRating'}).find('strong') is not None:
+                if movie.find('td', {'class': 'ratingColumn imdbRating'}).find('strong') is not None: # in 'Most Popular Movie' ranking some movies do not have to have rakings
                     ratings.append(movie.find('td', {'class': 'ratingColumn imdbRating'}).find('strong').contents[0])
                 else:
                     ratings.append(None)
