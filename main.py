@@ -1,6 +1,8 @@
+# main.py
 from utils import IMDB_scraper
 from utils import optional_parser_arguments
 from numpy import arange
+
 
 def get_df():
     obj = IMDB_scraper()
